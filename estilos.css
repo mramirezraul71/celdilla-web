@@ -197,7 +197,9 @@ p { margin: 0 0 1em; }
   :root {
     --tinta: #000; --suave: #333; --papel: #fff; --papel-2: #fff; --tarjeta: #fff;
     --sobre-noche: #000; --sobre-noche-suave: #333; --enlace: #000;
+    --acento: #8a5a14; --icono: #8a5a14; --subrayado: #8a5a14;
   }
+  .portada h1 em { color: #000; }
   .cabecera nav, .acciones, .saltar, .portada::before { display: none; }
   .portada, .seccion--noche, .cabecera, .pie { background: none; color: #000; }
 }
