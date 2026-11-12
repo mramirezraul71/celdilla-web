@@ -4,4 +4,4 @@ La página oficial de Celdilla: quiénes somos, lo que hacemos y cómo escribirn
 
 Celdilla’s official website: who we are, what we make and how to reach us. A static site with no scripts, cookies or trackers, in Spanish (`/`) and English (`/en/`).
 
-© 2026 Celdilla LLC. Contacto / contact: raul@celdilla.com
+© 2026 Celdilla. Contacto / contact: raul@celdilla.com

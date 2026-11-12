@@ -18,6 +18,7 @@
   --enlace: #21222d;
   --subrayado: #c68328;
   --icono: #c68328;
+  --foco: #8a5a14;
   --sombra: 0 1px 2px rgb(33 34 45 / 6%), 0 10px 28px rgb(33 34 45 / 7%);
 }
 @media (prefers-color-scheme: dark) {
@@ -32,9 +33,12 @@
     --enlace: #ffe2a0;
     --subrayado: #e7b156;
     --icono: #e7b156;
+    --foco: #e7b156;
     --sombra: none;
   }
 }
+/* Sobre las franjas oscuras el foco va en oro claro; sobre papel, en oro oscuro (contraste de al menos 3:1). */
+.cabecera, .portada, .seccion--noche, .pie, .saltar { --foco: #e7b156; }
 
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
@@ -52,7 +56,7 @@ a {
   text-underline-offset: 3px;
 }
 a:hover { text-decoration-color: currentColor; }
-:focus-visible { outline: 3px solid var(--oro); outline-offset: 3px; border-radius: 4px; }
+:focus-visible { outline: 3px solid var(--foco); outline-offset: 3px; border-radius: 4px; }
 h1, h2, h3 { line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 0.6em; }
 h2 { font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.2rem); }
 h3 { font-size: 1.2rem; }
@@ -107,7 +111,7 @@ p { margin: 0 0 1em; }
   letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 1rem;
 }
 .portada h1 { font-size: clamp(2.2rem, 1.4rem + 3.6vw, 3.7rem); line-height: 1.08; margin-bottom: 1.2rem; }
-.portada h1 em { font-style: normal; color: var(--oro); }
+.portada h1 em { font-style: normal; color: var(--oro); white-space: nowrap; }
 .entrada { font-size: clamp(1.08rem, 1rem + 0.35vw, 1.25rem); color: var(--sobre-noche-suave); max-width: 38rem; }
 .acciones { display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 1.8rem 0 0; }
 .portada__logo { justify-self: center; width: min(300px, 70vw); height: auto; border-radius: 28px; }
@@ -138,6 +142,10 @@ p { margin: 0 0 1em; }
   display: flex; flex-direction: column;
   background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 14px;
   padding: 1.6rem 1.5rem 1.4rem; box-shadow: var(--sombra);
+}
+/* Con subgrid, icono, etiqueta, título, texto y enlace quedan a la misma altura en las tres tarjetas. */
+@supports (grid-template-rows: subgrid) {
+  .tarjeta { display: grid; grid-row: span 5; grid-template-rows: subgrid; row-gap: 0; align-content: start; }
 }
 .tarjeta__icono { width: 52px; height: 52px; color: var(--icono); margin-bottom: 1rem; }
 .etiqueta {
@@ -186,6 +194,10 @@ p { margin: 0 0 1em; }
 .suave { color: var(--suave); }
 
 @media print {
+  :root {
+    --tinta: #000; --suave: #333; --papel: #fff; --papel-2: #fff; --tarjeta: #fff;
+    --sobre-noche: #000; --sobre-noche-suave: #333; --enlace: #000;
+  }
   .cabecera nav, .acciones, .saltar, .portada::before { display: none; }
   .portada, .seccion--noche, .cabecera, .pie { background: none; color: #000; }
 }

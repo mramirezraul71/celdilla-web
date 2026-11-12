@@ -7,7 +7,7 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#21222d">
-  <title>Celdilla LLC · Useful tools, well made</title>
+  <title>Celdilla · Useful tools, well made</title>
   <meta name="description" content="Celdilla makes tax guides with official sources for accountants, the e-CF kit for Dominican accounting firms, and Carta del Amanecer.">
   <link rel="canonical" href="https://celdilla.com/en/">
   <link rel="alternate" hreflang="es" href="https://celdilla.com/">
@@ -35,17 +35,24 @@
       {
         "@type": "Organization",
         "@id": "https://celdilla.com/#organizacion",
-        "name": "Celdilla LLC",
-        "alternateName": "Celdilla",
+        "name": "Celdilla",
         "url": "https://celdilla.com/",
         "logo": "https://celdilla.com/img/logo-512.png",
         "email": "raul@celdilla.com"
       },
       {
+        "@type": "WebSite",
+        "@id": "https://celdilla.com/#web",
+        "url": "https://celdilla.com/",
+        "name": "Celdilla",
+        "inLanguage": ["es", "en"],
+        "publisher": { "@id": "https://celdilla.com/#organizacion" }
+      },
+      {
         "@type": "WebPage",
         "@id": "https://celdilla.com/en/#pagina",
         "url": "https://celdilla.com/en/",
-        "name": "Celdilla LLC · Useful tools, well made",
+        "name": "Celdilla · Useful tools, well made",
         "inLanguage": "en",
         "isPartOf": { "@id": "https://celdilla.com/#web" },
         "about": { "@id": "https://celdilla.com/#organizacion" }
@@ -59,7 +66,7 @@
 
   <header class="cabecera">
     <div class="ancho cabecera__fila">
-      <a class="marca" href="/en/"><img src="/img/logo-256.webp" alt="" width="40" height="40"><span>Celdilla</span></a>
+      <a class="marca" href="/en/"><img src="/img/logo-pequeno.webp" alt="" width="40" height="40"><span>Celdilla</span></a>
       <nav aria-label="Main">
         <ul>
           <li class="solo-ancho"><a href="#productos">What we make</a></li>
@@ -75,12 +82,11 @@
     <section class="portada" aria-labelledby="titulo">
       <div class="ancho portada__fila">
         <div>
-          <p class="antetitulo">Celdilla LLC</p>
           <h1 id="titulo">Useful tools, <em>well made</em>.</h1>
-          <p class="entrada">We make tax compliance guides with official sources for accountants, a kit to roll out electronic invoicing in the Dominican Republic, and Carta del Amanecer, a morning letter with the Bible.</p>
+          <p class="entrada">We make tax compliance guides for accountants that cite their official sources, a kit to roll out electronic invoicing in the Dominican Republic, and <span lang="es">Carta del Amanecer</span> (“Dawn Letter”), a daily letter with a Bible verse.</p>
           <p class="acciones">
             <a class="boton boton--oro" href="#productos">See what we make</a>
-            <a class="boton boton--linea" href="mailto:raul@celdilla.com">Write to us</a>
+            <a class="boton boton--linea" href="#contacto">Email us</a>
           </p>
         </div>
         <img class="portada__logo" src="/img/logo-512.webp" alt="" width="300" height="300">
@@ -96,15 +102,15 @@
             <svg class="tarjeta__icono" viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 3 42.2 13.5v21L24 45 5.8 34.5v-21Z"/><path d="M15 18.5c3.2-1.6 6.2-1.6 9 0v13c-2.8-1.6-5.8-1.6-9 0Zm18 0c-3.2-1.6-6.2-1.6-9 0v13c2.8-1.6 5.8-1.6 9 0Z"/></svg>
             <p class="etiqueta">Free · For accountants</p>
             <h3>Tax compliance guides</h3>
-            <p>Guides with official sources and review dates on electronic invoicing (e-CF) in the Dominican Republic, VERI*FACTU in Spain, and the <span lang="pt-BR">certidões</span> needed to bid in Brazil.</p>
+            <p>Guides with official sources and review dates on electronic invoicing (e-CF) in the Dominican Republic, VERI*FACTU in Spain, and the <span lang="pt-BR">certidões</span> needed to bid for public contracts in Brazil.</p>
             <a class="tarjeta__enlace" href="https://guias.celdilla.com/">Read the guides<span aria-hidden="true"> →</span></a>
           </li>
           <li class="tarjeta">
             <svg class="tarjeta__icono" viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 3 42.2 13.5v21L24 45 5.8 34.5v-21Z"/><path d="M15 20h18v12H15Zm0 4.5h18m-12.5-4.5v-2.5h7V20"/></svg>
-            <p class="etiqueta">For accounting firms</p>
+            <p class="etiqueta">Paid · For accounting firms</p>
             <h3>e-CF Kit</h3>
             <p>To roll out electronic invoicing in the Dominican Republic across a whole client portfolio, one client at a time, with official sources.</p>
-            <a class="tarjeta__enlace" href="https://ramirezral.gumroad.com/l/kit-ecf-rd">See the kit on Gumroad<span aria-hidden="true"> →</span></a>
+            <a class="tarjeta__enlace" href="https://ramirezral.gumroad.com/l/kit-ecf-rd">See the kit and its price on Gumroad<span aria-hidden="true"> →</span></a>
           </li>
           <li class="tarjeta">
             <svg class="tarjeta__icono" viewBox="0 0 48 48" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 3 42.2 13.5v21L24 45 5.8 34.5v-21Z"/><path d="M15 31h18m-14.5 0a5.5 5.5 0 0 1 11 0M24 19.5V22m-7 .5 1.8 1.8m13.2-1.8-1.8 1.8"/></svg>
@@ -123,19 +129,19 @@
         <ul class="principios">
           <li>
             <h3>Sources in plain sight</h3>
-            <p>What we state comes with its official source and the date we checked it. Bible verses are quoted word for word, with their reference and translation.</p>
+            <p>Our tax guides include their official sources and review dates. In <span lang="es">Carta del Amanecer</span>, Bible verses are quoted word for word, with their reference and translation.</p>
           </li>
           <li>
             <h3>No ads, no tracking</h3>
-            <p>Our websites and our app have no advertising, no analytics and no trackers.</p>
+            <p>Our websites and our app show no ads and carry no analytics or trackers. When we advertise the guides on Google, visitors arrive at the same website, with no tracking pixels.</p>
           </li>
           <li>
             <h3>Clear prices</h3>
-            <p>What is free is truly free, and what is paid shows its price from the start.</p>
+            <p>The guides and <span lang="es">Carta del Amanecer</span> are free and need no account. The kit’s price and options are shown on Gumroad before you buy.</p>
           </li>
           <li>
-            <h3>Made with AI, reviewed with care</h3>
-            <p>We use artificial intelligence to research, write and code, and we review what we publish before it goes out.</p>
+            <h3>Made with AI, reviewed before publishing</h3>
+            <p>We use artificial intelligence to research, write and code. Before anything is published, a second AI model from a different maker reviews it and a person signs off. If you find a mistake, tell us.</p>
           </li>
         </ul>
       </div>
@@ -154,7 +160,7 @@
     <section id="contacto" class="seccion seccion--noche" aria-labelledby="contacto-titulo">
       <div class="ancho contacto">
         <h2 id="contacto-titulo">Contact</h2>
-        <p>For questions, proposals or to tell us about a mistake, write to us:</p>
+        <p>For questions or proposals, or to report a mistake, email us:</p>
         <p><a class="boton boton--oro" href="mailto:raul@celdilla.com">raul@celdilla.com</a></p>
       </div>
     </section>
@@ -162,14 +168,15 @@
 
   <footer class="pie">
     <div class="ancho">
-      <p class="pie__marca"><img src="/img/logo-256.webp" alt="" width="28" height="28">Celdilla LLC</p>
+      <p class="pie__marca"><img src="/img/logo-pequeno.webp" alt="" width="28" height="28">Celdilla</p>
       <ul>
         <li><a href="/en/privacy.html">Privacy</a></li>
         <li><a href="/" hreflang="es" lang="es">Español</a></li>
       </ul>
       <p>This website uses no cookies and no trackers.</p>
-      <p>Celdilla is not affiliated with the DGII, the Dominican tax authority, or with any other tax authority. The guides are general information, not advice.</p>
-      <p>© 2026 Celdilla LLC</p>
+      <p>Celdilla is independent: it is not affiliated with the DGII (Dominican Republic), the AEAT (Spain) or any other public authority. The guides are general information, not tax or legal advice.</p>
+      <p>Celdilla LLC was filed in North Carolina (USA) in October 2026 and takes effect on January 1, 2027.</p>
+      <p>© 2026 Celdilla</p>
     </div>
   </footer>
 </body>
