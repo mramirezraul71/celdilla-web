@@ -1,0 +1,191 @@
+/* celdilla.com. Colores del logotipo A: fondo #21222d y oro de #c68328 a #ffe893.
+   Sin fuentes ni scripts externos: letra del sistema y nada que cargar de otros sitios. */
+:root {
+  --noche: #21222d;
+  --noche-2: #1a1b24;
+  --oro: #e7b156;
+  --oro-claro: #ffe893;
+  --oro-oscuro: #c68328;
+  --sobre-noche: #f3f0e8;
+  --sobre-noche-suave: #c6c4cf;
+  --tinta: #1f2029;
+  --suave: #535664;
+  --papel: #fbfaf6;
+  --papel-2: #f3f0e7;
+  --tarjeta: #ffffff;
+  --borde: #e4dfd2;
+  --acento: #8a5a14;
+  --enlace: #21222d;
+  --subrayado: #c68328;
+  --icono: #c68328;
+  --sombra: 0 1px 2px rgb(33 34 45 / 6%), 0 10px 28px rgb(33 34 45 / 7%);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tinta: #ecebe6;
+    --suave: #b0b2bd;
+    --papel: #15161d;
+    --papel-2: #1b1c25;
+    --tarjeta: #21222d;
+    --borde: #353748;
+    --acento: #e7b156;
+    --enlace: #ffe2a0;
+    --subrayado: #e7b156;
+    --icono: #e7b156;
+    --sombra: none;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+body {
+  margin: 0;
+  font: 400 1.0625rem/1.65 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--tinta);
+  background: var(--papel);
+}
+a {
+  color: var(--enlace);
+  text-decoration-color: var(--subrayado);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+a:hover { text-decoration-color: currentColor; }
+:focus-visible { outline: 3px solid var(--oro); outline-offset: 3px; border-radius: 4px; }
+h1, h2, h3 { line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 0.6em; }
+h2 { font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.2rem); }
+h3 { font-size: 1.2rem; }
+p { margin: 0 0 1em; }
+
+.ancho { width: 100%; max-width: 68rem; margin: 0 auto; padding: 0 1rem; }
+@media (min-width: 48rem) { .ancho { padding: 0 2rem; } }
+
+.saltar {
+  position: absolute; left: 1rem; top: -4rem; z-index: 10;
+  background: var(--oro); color: var(--noche);
+  padding: 0.6rem 1rem; border-radius: 8px; font-weight: 600;
+}
+.saltar:focus { top: 1rem; }
+
+/* Cabecera */
+.cabecera { background: var(--noche); color: var(--sobre-noche); }
+.cabecera__fila { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 4.5rem; }
+.marca {
+  display: inline-flex; align-items: center; gap: 0.7rem;
+  color: var(--sobre-noche); text-decoration: none;
+  font-weight: 700; font-size: 1.25rem; letter-spacing: 0.02em;
+}
+.marca img { width: 40px; height: 40px; border-radius: 9px; }
+.cabecera ul { display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
+.cabecera nav a {
+  display: inline-block; padding: 0.6rem 0;
+  color: var(--sobre-noche-suave); text-decoration: none; font-size: 0.95rem;
+}
+.cabecera nav a:hover { color: var(--oro-claro); }
+@media (max-width: 47.99rem) { .solo-ancho { display: none; } }
+
+/* Portada */
+.portada {
+  position: relative; isolation: isolate; overflow: hidden;
+  background: var(--noche); color: var(--sobre-noche);
+  padding: 3.5rem 0 4.5rem;
+}
+.portada::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: url("/img/panal.svg") 0 0 / 62.35px 108px repeat;
+  -webkit-mask-image: radial-gradient(ellipse 75% 95% at 88% 35%, #000 0%, transparent 72%);
+  mask-image: radial-gradient(ellipse 75% 95% at 88% 35%, #000 0%, transparent 72%);
+}
+.portada__fila { display: grid; gap: 2rem; align-items: center; }
+@media (min-width: 52rem) {
+  .portada { padding: 5rem 0 6rem; }
+  .portada__fila { grid-template-columns: 1.4fr 1fr; }
+}
+.antetitulo {
+  color: var(--oro); font-weight: 600; font-size: 0.8rem;
+  letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 1rem;
+}
+.portada h1 { font-size: clamp(2.2rem, 1.4rem + 3.6vw, 3.7rem); line-height: 1.08; margin-bottom: 1.2rem; }
+.portada h1 em { font-style: normal; color: var(--oro); }
+.entrada { font-size: clamp(1.08rem, 1rem + 0.35vw, 1.25rem); color: var(--sobre-noche-suave); max-width: 38rem; }
+.acciones { display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 1.8rem 0 0; }
+.portada__logo { justify-self: center; width: min(300px, 70vw); height: auto; border-radius: 28px; }
+@media (max-width: 51.99rem) { .portada__logo { display: none; } }
+
+/* Botones */
+.boton {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 48px; padding: 0.7rem 1.35rem; border-radius: 999px;
+  border: 2px solid transparent; font-weight: 650; text-decoration: none;
+}
+.boton--oro { background: var(--oro); color: var(--noche); }
+.boton--oro:hover { background: var(--oro-claro); }
+.boton--linea { border-color: rgb(231 177 86 / 60%); color: var(--sobre-noche); }
+.boton--linea:hover { border-color: var(--oro); color: var(--oro-claro); }
+
+/* Secciones */
+.seccion { padding: 4rem 0; }
+@media (min-width: 48rem) { .seccion { padding: 5.5rem 0; } }
+.seccion--suave { background: var(--papel-2); }
+.seccion--noche { background: var(--noche); color: var(--sobre-noche); }
+.intro { color: var(--suave); max-width: 42rem; }
+
+/* Lo que hacemos */
+.tarjetas { list-style: none; margin: 2rem 0 0; padding: 0; display: grid; gap: 1.25rem; }
+@media (min-width: 52rem) { .tarjetas { grid-template-columns: repeat(3, 1fr); } }
+.tarjeta {
+  display: flex; flex-direction: column;
+  background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 14px;
+  padding: 1.6rem 1.5rem 1.4rem; box-shadow: var(--sombra);
+}
+.tarjeta__icono { width: 52px; height: 52px; color: var(--icono); margin-bottom: 1rem; }
+.etiqueta {
+  color: var(--acento); font-size: 0.78rem; font-weight: 650;
+  letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.5rem;
+}
+.tarjeta p:not(.etiqueta) { color: var(--suave); }
+.tarjeta__enlace { margin-top: auto; padding-top: 0.4rem; font-weight: 650; }
+
+/* Cómo trabajamos */
+.principios { list-style: none; margin: 2rem 0 0; padding: 0; display: grid; gap: 1.6rem 2.5rem; }
+@media (min-width: 48rem) { .principios { grid-template-columns: repeat(2, 1fr); } }
+.principios li { position: relative; padding-left: 2.4rem; }
+.principios li::before {
+  content: ""; position: absolute; left: 0; top: 0.15rem;
+  width: 1.3rem; height: 1.5rem; background: var(--oro);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+.principios h3 { margin-bottom: 0.35rem; }
+.principios p { color: var(--suave); margin: 0; }
+
+/* Por qué «Celdilla» */
+.nombre { display: grid; gap: 1.5rem; align-items: center; }
+@media (min-width: 48rem) { .nombre { grid-template-columns: 8rem 1fr; gap: 3rem; } }
+.nombre svg { width: 7.5rem; height: auto; color: var(--icono); }
+.nombre p { font-size: 1.15rem; max-width: 42rem; margin: 0; }
+
+/* Contacto */
+.contacto { text-align: center; }
+.contacto p { color: var(--sobre-noche-suave); }
+.contacto .boton { margin-top: 0.4rem; }
+
+/* Pie */
+.pie { background: var(--noche-2); color: var(--sobre-noche-suave); font-size: 0.92rem; padding: 2.5rem 0 3rem; }
+.pie a { color: var(--sobre-noche); text-decoration-color: rgb(231 177 86 / 60%); }
+.pie__marca { display: flex; align-items: center; gap: 0.6rem; color: var(--sobre-noche); font-weight: 700; }
+.pie__marca img { width: 28px; height: 28px; border-radius: 6px; }
+.pie ul { display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; list-style: none; margin: 0 0 1rem; padding: 0; }
+.pie p:last-child { margin-bottom: 0; }
+
+/* Páginas de texto */
+.texto { padding: 3rem 0 4rem; }
+.texto .ancho { max-width: 46rem; }
+.texto h1 { font-size: clamp(1.8rem, 1.4rem + 1.6vw, 2.4rem); }
+.texto h2 { font-size: 1.3rem; margin-top: 2.2rem; }
+.suave { color: var(--suave); }
+
+@media print {
+  .cabecera nav, .acciones, .saltar, .portada::before { display: none; }
+  .portada, .seccion--noche, .cabecera, .pie { background: none; color: #000; }
+}

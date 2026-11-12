@@ -1,0 +1,16 @@
+# Celdilla
+
+> Celdilla LLC hace herramientas digitales útiles: guías fiscales con fuente oficial para contadores, el kit e-CF para despachos contables de República Dominicana y Carta del Amanecer, una carta diaria con la Biblia. Sus webs y su app no tienen publicidad, analítica ni rastreadores.
+
+## Lo que hace
+
+- [Guías de cumplimiento fiscal](https://guias.celdilla.com/): guías gratuitas, con fuente oficial y fecha de revisión, sobre e-CF en República Dominicana, VERI*FACTU en España y certidões para licitar en Brasil. Información general, no asesoramiento.
+- [Kit e-CF para despachos contables (República Dominicana)](https://ramirezral.gumroad.com/l/kit-ecf-rd): para implantar la facturación electrónica de toda una cartera, cliente a cliente, con fuentes oficiales. Se vende en Gumroad.
+- [Carta del Amanecer](https://carta.celdilla.com/): cada mañana, una carta con un versículo de la Biblia, una reflexión y una oración. Gratis, sin cuenta y sin anuncios. La app para Android está en prueba.
+
+## La empresa
+
+- [Inicio](https://celdilla.com/) · [English](https://celdilla.com/en/)
+- [Privacidad](https://celdilla.com/privacidad.html)
+- Contacto: raul@celdilla.com
+- Celdilla no está vinculada a la DGII ni a ninguna otra administración tributaria.
